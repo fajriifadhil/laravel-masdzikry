@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@supports not (color: oklch(0 0 0)) {
+    :root {
+        color-scheme: light;
+        --fallback-p: #285fd9;
+        --fallback-pc: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            color-scheme: dark;
+            --fallback-p: #285fd9;
+            --fallback-pc: #ffffff;
+        }
+    }
+}
+
+* {
+    font-family: "Rubik", sans-serif;
+}
+
+html {
+    @apply scroll-smooth;
+}
+
+.btn {
+    @apply rounded-md;
+    @apply font-semibold;
+}
+
+.btn-rounded-full {
+    @apply rounded-full;
+}
+
+.input,
+.select,
+.modal-box,
+.alert,
+.badge {
+    @apply rounded;
+}
+
+.screen-fit {
+    @apply min-h-screen;
+    @apply flex;
+    @apply flex-col;
+    @apply justify-center;
+}
+
+.container-fit {
+    @apply container;
+    @apply max-w-6xl;
+    @apply mx-auto;
+    @apply px-5;
+}
+
+.section {
+    @apply py-14;
+    @apply md:py-20;
+}
+
+.section-md {
+    @apply py-10;
+    @apply md:py-14;
+}
+
+.h-section {
+    @apply font-bold;
+    @apply text-2xl;
+    @apply md:text-4xl;
+}
+
+.p-section {
+    @apply leading-8;
+    @apply md:text-lg;
+}
+
+.card-facility {
+    @apply flex;
+    @apply gap-2;
+    @apply items-center;
+    @apply font-semibold;
+    @apply items-center;
+    @apply text-sm;
+    @apply p-3;
+    @apply border;
+    @apply rounded;
+    @apply bg-white;
+}
+
+.card-review {
+    @apply border;
+    @apply p-6;
+    @apply flex;
+    @apply gap-3;
+    @apply carousel-item;
+    @apply text-sm;
+    @apply max-w-[18rem];
+    @apply sm:max-w-none;
+    @apply rounded;
+    @apply font-medium;
+    @apply bg-white;
+}
+
+.card-review p {
+    @apply line-clamp-3;
+}
+
+.card-booking {
+    @apply border;
+    @apply rounded;
+    /* @apply overflow-hidden; */
+    @apply bg-white;
+}
+
+.package-list {
+    @apply text-sm;
+    @apply sm:text-base;
+    @apply font-medium;
+}
+
+.package-list .fnp {
+    @apply flex;
+    @apply flex-wrap;
+    @apply justify-between;
+}
+
+.fnp span {
+    @apply font-bold;
+}
+
+.package-list li:nth-child(even) {
+    @apply text-primary/80;
+}
+
+.card-tour {
+    @apply overflow-hidden;
+    @apply border;
+    @apply rounded;
+    @apply bg-white;
+}
+
+.scroll-snap-btn {
+    @apply btn;
+    @apply btn-square;
+}
+
+.card-promo {
+    @apply rounded;
+    @apply overflow-hidden;
+    @apply bg-white;
+    @apply border;
+    @apply h-fit;
+}
+
+.breadcrumbs a {
+    @apply text-blue-400;
+}
+
+.card-nav-dashboard {
+    @apply bg-white;
+    @apply border;
+    @apply rounded;
+    @apply p-6;
+    @apply flex;
+    @apply gap-2;
+    @apply items-center;
+    @apply justify-between;
+    @apply hover:shadow;
+}
+
+.input-group {
+    @apply flex;
+    @apply flex-col;
+    @apply gap-1;
+}
+
+.input-group label {
+    @apply text-sm;
+    @apply font-medium;
+}
+
+.input-group input {
+    @apply input;
+    @apply input-bordered;
+}
